@@ -21,6 +21,8 @@ public class CalcolaArrayModificato{
     
     public static void main(String[] args){
 
+        //Test
+
         int[] myArray = {5,3,7,80,45};
         int num = 7;
 
