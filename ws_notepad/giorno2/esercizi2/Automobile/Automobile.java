@@ -57,5 +57,47 @@ public class Automobile{
         return annoPerConfronto - annoUltimaRevisione > 2;
     }
 
+    //Verifica se l'automobile è presente nel catalogo
+    public boolean modelloPresenteInCatalogo(Automobile[] catalogo){
+        for(Automobile automobile : catalogo){
+            if(this.modello.equals(automobile.modello)&&(this.marca.equals(automobile.marca))) return true;
+        }
+        return false;
+    }
+
+    //Verifica se tutte le auto nel catalogo sono ferme
+    public static boolean sonoTutteFerme(Automobile[] catalogo){
+        for(Automobile automobile: catalogo){
+            if(automobile.velocitaCorrente != 0) return false;
+        }
+        return true;
+    }
+
+    //Stampa Catalogo
+    public static void stampaCatalogo(Automobile[] catalogo){
+        for(Automobile automobile : catalogo){
+            automobile.stampaAutomobile();
+        }
+    }
+
+    //Dato un catalogo e un modello restituisce il numero delle occorrenze
+    public int numeroOccorrenze(Automobile[] catalogo){
+        int count = 0;
+        for(Automobile automobile : catalogo){
+            if(this.modello.equals(automobile.modello)&&(this.marca.equals(automobile.marca))) count += 1;
+        }
+        return count;
+    }
+
+    //Dato un catalogo restituisce l'auto con la revisione più recente
+    public static Automobile revisionePiuRecente(Automobile[] catalogo){
+        Automobile mostRecent = catalogo[1];
+        for(int i=1;i < catalogo.length; i++){
+            if(mostRecent.annoUltimaRevisione < catalogo[i].annoUltimaRevisione) mostRecent = catalogo[i];
+        }
+        return mostRecent;
+    }
+
+
 
 }
