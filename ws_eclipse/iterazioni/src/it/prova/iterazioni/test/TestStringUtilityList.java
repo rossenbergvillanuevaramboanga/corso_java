@@ -17,6 +17,15 @@ public class TestStringUtilityList {
 
 		System.out.println(StringUtilityList.sonoUgualiLunghezzeIesime(firstList, secondList)); // true
 		System.out.println(StringUtilityList.sonoUgualiLunghezzeIesime(firstList, thirdList)); // false
+		
+		
+		// Test: trasformaInListDiCharacters
+		System.out.println("------TEST: trasformaInListDiCharacters");
+		String nomeString = "Rossenberg";
+		
+		System.out.println(nomeString);
+		System.out.println(Arrays.toString(StringUtilityList.trasformaInListDiCharacters(nomeString).toArray()));
+		
 	}
 
 }
