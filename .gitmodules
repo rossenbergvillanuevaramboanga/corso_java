@@ -1,0 +1,3 @@
+[submodule "primoonetomany"]
+	path = primoonetomany
+	url = https://github.com/amultari/primoonetomany.git
